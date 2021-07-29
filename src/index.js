@@ -9,6 +9,7 @@ const server = new GraphQLServer({
       agent(id:ID!): User!
       agents(name:String, age:Int): [User!]!
       posts: [Post!]!
+      post(id:ID!): Post!
     } 
 
     type User {
@@ -41,6 +42,10 @@ const server = new GraphQLServer({
       },
       posts: async (parent, args, context, info) => {
         const response = await axios.get(`${db}/posts`);
+        return response.data;
+      },
+      post: async (parent, args, context, info) => {
+        const response = await axios.get(`${db}/posts/${args.id}`);
         return response.data;
       },
     },
