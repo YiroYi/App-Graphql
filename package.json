@@ -1,0 +1,24 @@
+{
+  "name": "app-graphql",
+  "version": "1.0.0",
+  "description": "first-graphql-app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YiroYi/App-Graphql.git"
+  },
+  "author": "Yiro Yi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/YiroYi/App-Graphql/issues"
+  },
+  "homepage": "https://github.com/YiroYi/App-Graphql#readme",
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0"
+  }
+}
