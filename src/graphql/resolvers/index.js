@@ -56,15 +56,34 @@ const Mutation = {
     }
     return false;
   },
-  deleteAgent: async(parent, args, context, info) => {
+  deleteAgent: async (parent, args, context, info) => {
     const response = await axios.delete(`${db}/users/${args.id}`);
 
-    if(Object.keys(response.data).length === 0) {
+    if (Object.keys(response.data).length === 0) {
       return true;
     }
 
     return false;
-  }
+  },
+  updateAgent: async (parent, args, context, info) => {
+    const data = {};
+
+    if (args.name !== undefined) {
+      data.name = args.name;
+    }
+    if (args.age !== undefined) {
+      data.age = args.age;
+    }
+    if (args.married !== undefined) {
+      data.married = args.married;
+    }
+    if (args.average !== undefined) {
+      data.average = args.average;
+    }
+    const response = await axios.patch(`${db}/users/${args.id}`,data);
+
+    return response.data;
+  },
 };
 
 const Post = {
