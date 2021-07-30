@@ -56,6 +56,15 @@ const Mutation = {
     }
     return false;
   },
+  deleteAgent: async(parent, args, context, info) => {
+    const response = await axios.delete(`${db}/users/${args.id}`);
+
+    if(Object.keys(response.data).length === 0) {
+      return true;
+    }
+
+    return false;
+  }
 };
 
 const Post = {
