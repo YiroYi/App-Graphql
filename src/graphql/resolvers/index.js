@@ -27,6 +27,37 @@ const Query = {
   },
 };
 
+const Mutation = {
+  createAgent: async (parent, args, context, info) => {
+    const response = await axios.post(`${db}/users`, {
+      name: args.name,
+      age: args.age,
+      married: args.married,
+      average: 0,
+    });
+
+    return response.data;
+  },
+  createPost: async (parent, args, context, info) => {
+    const response = await axios.post(`${db}/posts`, {
+      title: args.title,
+      content: args.content,
+      author: 1,
+      picture: 1,
+    });
+
+    return response.data;
+  },
+  deletePost: async (parent, args, context, info) => {
+    const response = await axios.delete(`${db}/posts/${args.id}`);
+
+    if (Object.keys(response.data).length === 0) {
+      return true;
+    }
+    return false;
+  },
+};
+
 const Post = {
   author: async (parent, args, context, info) => {
     const response = await axios.get(`${db}/users/${parent.author}`);
@@ -60,4 +91,4 @@ const Picture = {
   },
 };
 
-export { Query, Post, User, Picture };
+export { Query, Post, User, Picture, Mutation };

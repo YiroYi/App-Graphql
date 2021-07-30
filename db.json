@@ -96,6 +96,18 @@
       "author": 1,
       "picture": 2,
       "id": 9
+    },
+    {
+      "title": "My Travel",
+      "content": "Quarentine time in Seoul",
+      "id": 11
+    },
+    {
+      "title": "My Travel",
+      "content": "Quarentine time in Seoul",
+      "author": 1,
+      "picture": 1,
+      "id": 12
     }
   ],
   "pictures": [
