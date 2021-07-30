@@ -2,11 +2,11 @@
   "users": [
     {
       "id": 1,
-      "name": "Rajesh",
+      "name": "Pedrito",
       "age": 23,
       "married": true,
       "average": 4.5,
-      "status": "active"
+      "status": "not_active"
     },
     {
       "id": 2,
@@ -96,6 +96,26 @@
       "author": 1,
       "picture": 2,
       "id": 9
+    },
+    {
+      "title": "My Travel",
+      "content": "Quarentine time in Seoul",
+      "id": 11
+    },
+    {
+      "title": "My Travel",
+      "content": "Quarentine time in Seoul",
+      "author": 1,
+      "picture": 1,
+      "id": 12
+    },
+    {
+      "title": "My Travel",
+      "content": "Quarentine time in Seoul",
+      "author": 1,
+      "picture": 1,
+      "status": "DRAFT",
+      "id": 13
     }
   ],
   "pictures": [
