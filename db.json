@@ -6,7 +6,7 @@
       "age": 23,
       "married": true,
       "average": 4.5,
-      "status": "active"
+      "status": "not_active"
     },
     {
       "id": 2,
@@ -31,13 +31,6 @@
       "married": true,
       "average": 2.5,
       "status": "guest"
-    },
-    {
-      "name": "Yiro",
-      "age": 34,
-      "married": false,
-      "average": 0,
-      "id": 5
     }
   ],
   "posts": [
@@ -115,6 +108,14 @@
       "author": 1,
       "picture": 1,
       "id": 12
+    },
+    {
+      "title": "My Travel",
+      "content": "Quarentine time in Seoul",
+      "author": 1,
+      "picture": 1,
+      "status": "DRAFT",
+      "id": 13
     }
   ],
   "pictures": [

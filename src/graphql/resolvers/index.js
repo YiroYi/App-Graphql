@@ -34,6 +34,7 @@ const Mutation = {
       age: args.data.age,
       married: args.data.married,
       average: 0,
+      status: args.data.status,
     });
 
     return response.data;
@@ -44,6 +45,7 @@ const Mutation = {
       content: args.content,
       author: 1,
       picture: 1,
+      status: args.status,
     });
 
     return response.data;
@@ -80,7 +82,10 @@ const Mutation = {
     if (args.data.average !== undefined) {
       data.average = args.data.average;
     }
-    const response = await axios.patch(`${db}/users/${args.id}`,data);
+    if (args.data.status !== undefined) {
+      data.status = args.data.status;
+    }
+    const response = await axios.patch(`${db}/users/${args.id}`, data);
 
     return response.data;
   },
